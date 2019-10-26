@@ -1,0 +1,28 @@
+V3 15
+FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd 2019/05/22.23:41:28 P.20131013
+EN work/debounce 1558557693 \
+      FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/debounce/logic 1558557694 \
+      FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd \
+      EN work/debounce 1558557693
+FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd 2019/05/22.23:37:52 P.20131013
+EN work/keyboard_to_bcd 1558557697 \
+      FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/keyboard_to_bcd/behavior 1558557698 \
+      FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd \
+      EN work/keyboard_to_bcd 1558557697 CP keyboard
+FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd 2019/05/22.23:36:46 P.20131013
+EN work/keyboard 1558557695 \
+      FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/keyboard/arch1 1558557696 \
+      FL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd \
+      EN work/keyboard 1558557695 CP debounce
+FL C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/debounce.vhd 2019/05/22.23:29:44 P.20131013
+FL C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/main.vhd 2019/05/22.23:28:50 P.20131013
+FL C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/process.vhd 2019/05/22.23:29:21 P.20131013
+AR work/keyboard/logic -1 \
+      FL C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/process.vhd \
+      EN work/keyboard 1558557695 CP debounce

@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/keyboard_to_bcd.xst" -ofn "C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/keyboard_to_bcd.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-5 keyboard_to_bcd.ngc keyboard_to_bcd.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc keyboard_to_bcd.ucf -p xc3s1200e-fg320-5 keyboard_to_bcd.ngc keyboard_to_bcd.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o keyboard_to_bcd_map.ncd keyboard_to_bcd.ngd keyboard_to_bcd.pcf 
+par -w -intstyle ise -ol high -t 1 keyboard_to_bcd_map.ncd keyboard_to_bcd.ncd keyboard_to_bcd.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml keyboard_to_bcd.twx keyboard_to_bcd.ncd -o keyboard_to_bcd.twr keyboard_to_bcd.pcf -ucf keyboard_to_bcd.ucf 
+bitgen -intstyle ise -f keyboard_to_bcd.ut keyboard_to_bcd.ncd 
+xst -intstyle ise -ifn "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/keyboard_to_bcd.xst" -ofn "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/keyboard_to_bcd.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc keyboard_to_bcd.ucf -p xc3s1200e-fg320-5 keyboard_to_bcd.ngc keyboard_to_bcd.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o keyboard_to_bcd_map.ncd keyboard_to_bcd.ngd keyboard_to_bcd.pcf 
+par -w -intstyle ise -ol high -t 1 keyboard_to_bcd_map.ncd keyboard_to_bcd.ncd keyboard_to_bcd.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml keyboard_to_bcd.twx keyboard_to_bcd.ncd -o keyboard_to_bcd.twr keyboard_to_bcd.pcf -ucf keyboard_to_bcd.ucf 
+bitgen -intstyle ise -f keyboard_to_bcd.ut keyboard_to_bcd.ncd 

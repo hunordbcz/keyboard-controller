@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/keyboard_to_bcd</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/main.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/keyboard_to_bcd/behavior</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/main.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/keyboard</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/process.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/debounce</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/debounce.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/debounce/logic</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/debounce.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd</arg>&quot; line <arg fmt="%d" index="2">57</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;reg_bcd&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">FFd4</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">FSM</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">FSM_FFd4</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">FSM_0-parent</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">refresh_counter_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">keyboard_to_bcd</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

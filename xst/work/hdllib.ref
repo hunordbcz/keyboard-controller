@@ -1,0 +1,7 @@
+EN keyboard NULL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd sub00/vhpl02 1558557695
+AR keyboard logic C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/process.vhd sub00/vhpl03 1558556995
+EN keyboard_to_bcd NULL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd sub00/vhpl04 1558557697
+EN debounce NULL C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd sub00/vhpl00 1558557693
+AR debounce logic C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd sub00/vhpl01 1558557694
+AR keyboard_to_bcd behavior C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd sub00/vhpl05 1558557698
+AR keyboard arch1 C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd sub00/vhpl06 1558557696

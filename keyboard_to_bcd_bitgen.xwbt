@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\debre\Desktop\Faculta\DSD\KeyboardControlleb\keyboard_to_bcd.ncd
+OUTFILE=C:\Users\debre\Desktop\Faculta\DSD\KeyboardControlleb\keyboard_to_bcd.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-5fg320
+WORKINGDIR=C:\Users\debre\Desktop\Faculta\DSD\KeyboardControlleb
+LICENSE=WebPack
+USER_INFO=211723605_0_0_831

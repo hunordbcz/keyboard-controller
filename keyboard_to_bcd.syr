@@ -1,0 +1,567 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: keyboard_to_bcd.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "keyboard_to_bcd.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "keyboard_to_bcd"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-5-fg320
+
+---- Source Options
+Top Module Name                    : keyboard_to_bcd
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/keyboard_to_bcd is now defined in a different file.  It was defined in "C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/main.vhd", and is now defined in "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd".
+WARNING:HDLParsers:3607 - Unit work/keyboard_to_bcd/behavior is now defined in a different file.  It was defined in "C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/main.vhd", and is now defined in "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd".
+WARNING:HDLParsers:3607 - Unit work/keyboard is now defined in a different file.  It was defined in "C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/process.vhd", and is now defined in "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd".
+WARNING:HDLParsers:3607 - Unit work/debounce is now defined in a different file.  It was defined in "C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/debounce.vhd", and is now defined in "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd".
+WARNING:HDLParsers:3607 - Unit work/debounce/logic is now defined in a different file.  It was defined in "C:/Users/debre/Desktop/Faculta/DSD/Project/KeyboardController/debounce.vhd", and is now defined in "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd".
+Compiling vhdl file "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd" in Library work.
+Entity <debounce> compiled.
+Entity <debounce> (Architecture <logic>) compiled.
+Compiling vhdl file "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd" in Library work.
+Entity <keyboard> compiled.
+Entity <keyboard> (Architecture <arch1>) compiled.
+Compiling vhdl file "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd" in Library work.
+Entity <keyboard_to_bcd> compiled.
+Entity <keyboard_to_bcd> (Architecture <behavior>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <keyboard_to_bcd> in library <work> (architecture <behavior>) with generics.
+	clk_freq = 50000000
+	keyboard_debounce_counter_size = 8
+
+Analyzing hierarchy for entity <keyboard> in library <work> (architecture <arch1>) with generics.
+	clk_freq = 50000000
+	debounce_counter_size = 8
+
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <logic>) with generics.
+	counter_size = 19
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <keyboard_to_bcd> in library <work> (Architecture <behavior>).
+	clk_freq = 50000000
+	keyboard_debounce_counter_size = 8
+WARNING:Xst:819 - "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd" line 57: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reg_bcd>
+Entity <keyboard_to_bcd> analyzed. Unit <keyboard_to_bcd> generated.
+
+Analyzing generic Entity <keyboard> in library <work> (Architecture <arch1>).
+	clk_freq = 50000000
+	debounce_counter_size = 8
+Entity <keyboard> analyzed. Unit <keyboard> generated.
+
+Analyzing generic Entity <debounce> in library <work> (Architecture <logic>).
+	counter_size = 19
+Entity <debounce> analyzed. Unit <debounce> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/debounce.vhd".
+    Found 1-bit register for signal <output>.
+    Found 20-bit up counter for signal <counter_out>.
+    Found 1-bit xor2 for signal <counter_set>.
+    Found 2-bit register for signal <flipflops>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <keyboard>.
+    Related source file is "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/process.vhd".
+    Found 8-bit register for signal <keyboard_code>.
+    Found 1-bit register for signal <keyboard_code_new>.
+    Found 12-bit up counter for signal <count_idle>.
+    Found 1-bit xor9 for signal <error$xor0000> created at line 50.
+    Found 11-bit register for signal <keyboard_word>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <keyboard> synthesized.
+
+
+Synthesizing Unit <keyboard_to_bcd>.
+    Related source file is "C:/Users/debre/Desktop/Faculta/DSD/KeyboardControlleb/main.vhd".
+    Register <bcd<8>> equivalent to <bcd<10>> has been removed
+    Register <bcd<9>> equivalent to <bcd<10>> has been removed
+    Found finite state machine <FSM_0> for signal <led_enable>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | led_enable$not0000        (positive)           |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | waiting                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4x4-bit ROM for signal <bcd_enable>.
+    Found 8-bit 4-to-1 multiplexer for signal <bcd_code>.
+    Found 2-bit register for signal <bcd<11:10>>.
+    Found 8-bit register for signal <bcd<7:0>>.
+    Found 1-bit register for signal <break>.
+    Found 1-bit register for signal <caps_lock>.
+    Found 1-bit register for signal <e0_code>.
+    Found 1-bit register for signal <prev_code_new>.
+    Found 32-bit up counter for signal <refresh_counter>.
+    Found 32-bit register for signal <reg_bcd>.
+    Found 1-bit register for signal <shift_l>.
+    Found 1-bit register for signal <shift_r>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <keyboard_to_bcd> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x4-bit ROM                                           : 1
+# Counters                                             : 4
+ 12-bit up counter                                     : 1
+ 20-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+# Registers                                            : 57
+ 1-bit register                                        : 55
+ 11-bit register                                       : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <state/FSM> on signal <state[1:2]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ waiting    | 00
+ new_code   | 01
+ trigger    | 10
+ new_output | 11
+------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <led_enable/FSM> on signal <led_enable[1:4]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0001
+ 01    | 0010
+ 10    | 0100
+ 11    | 1000
+-------------------
+WARNING:Xst:1426 - The value init of the FF/Latch FFd4 hinder the constant cleaning in the block FSM.
+   You should achieve better results by setting this init to 0.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# ROMs                                                 : 1
+ 4x4-bit ROM                                           : 1
+# Counters                                             : 4
+ 12-bit up counter                                     : 1
+ 20-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd4 hinder the constant cleaning in the block FSM_0-parent.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:2677 - Node <refresh_counter_20> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_21> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_22> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_23> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_24> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_25> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_26> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_27> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_28> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_29> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_30> of sequential type is unconnected in block <keyboard_to_bcd>.
+WARNING:Xst:2677 - Node <refresh_counter_31> of sequential type is unconnected in block <keyboard_to_bcd>.
+
+Optimizing unit <keyboard_to_bcd> ...
+
+Optimizing unit <keyboard> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block keyboard_to_bcd, actual ratio is 2.
+FlipFlop keyboard_0/keyboard_code_0 has been replicated 2 time(s)
+FlipFlop keyboard_0/keyboard_code_1 has been replicated 1 time(s)
+FlipFlop keyboard_0/keyboard_code_2 has been replicated 2 time(s)
+FlipFlop keyboard_0/keyboard_code_3 has been replicated 1 time(s)
+FlipFlop keyboard_0/keyboard_code_5 has been replicated 2 time(s)
+FlipFlop keyboard_0/keyboard_code_6 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 161
+ Flip-Flops                                            : 161
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : keyboard_to_bcd.ngr
+Top Level Output File Name         : keyboard_to_bcd
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 673
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 68
+#      LUT2                        : 21
+#      LUT2_D                      : 5
+#      LUT2_L                      : 4
+#      LUT3                        : 89
+#      LUT3_D                      : 9
+#      LUT3_L                      : 4
+#      LUT4                        : 185
+#      LUT4_D                      : 44
+#      LUT4_L                      : 48
+#      MUXCY                       : 83
+#      MUXF5                       : 27
+#      MUXF6                       : 2
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 72
+# FlipFlops/Latches                : 161
+#      FD                          : 26
+#      FD_1                        : 11
+#      FDE                         : 35
+#      FDR                         : 2
+#      FDRE                        : 52
+#      FDS                         : 35
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 2
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-5 
+
+ Number of Slices:                      251  out of   8672     2%  
+ Number of Slice Flip Flops:            161  out of  17344     0%  
+ Number of 4 input LUTs:                486  out of  17344     2%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    250     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)            | Load  |
+-----------------------------------+----------------------------------+-------+
+clk                                | BUFGP                            | 150   |
+keyboard_0/debounce_clk/output     | NONE(keyboard_0/keyboard_word_10)| 11    |
+-----------------------------------+----------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.245ns (Maximum Frequency: 121.293MHz)
+   Minimum input arrival time before clock: 1.731ns
+   Maximum output required time after clock: 6.041ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.245ns (frequency: 121.293MHz)
+  Total number of paths / destination ports: 7335 / 305
+-------------------------------------------------------------------------
+Delay:               8.245ns (Levels of Logic = 9)
+  Source:            keyboard_0/keyboard_code_3 (FF)
+  Destination:       bcd_4 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: keyboard_0/keyboard_code_3 to bcd_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             74   0.514   1.236  keyboard_0/keyboard_code_3 (keyboard_0/keyboard_code_3)
+     LUT4_D:I0->O          5   0.612   0.541  bcd_0_cmp_eq00241_SW0 (N157)
+     LUT4_D:I3->O          4   0.612   0.502  bcd_0_cmp_eq00171 (bcd_0_cmp_eq0017)
+     LUT4:I3->O            1   0.612   0.000  bcd_4_or0005_wg_lut<2> (bcd_4_or0005_wg_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  bcd_4_or0005_wg_cy<2> (bcd_4_or0005_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  bcd_4_or0005_wg_cy<3> (bcd_4_or0005_wg_cy<3>)
+     MUXCY:CI->O           3   0.399   0.603  bcd_4_or0005_wg_cy<4> (bcd_4_or0005)
+     LUT4:I0->O            1   0.612   0.000  bcd_4_mux000026_G (N355)
+     MUXF5:I1->O           1   0.278   0.387  bcd_4_mux000026 (bcd_4_mux000026)
+     LUT4:I2->O            1   0.612   0.000  bcd_4_mux000085 (bcd_4_mux0000)
+     FDE:D                     0.268          bcd_4
+    ----------------------------------------
+    Total                      8.245ns (4.975ns logic, 3.270ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'keyboard_0/debounce_clk/output'
+  Clock period: 1.351ns (frequency: 740.384MHz)
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Delay:               1.351ns (Levels of Logic = 0)
+  Source:            keyboard_0/keyboard_word_1 (FF)
+  Destination:       keyboard_0/keyboard_word_0 (FF)
+  Source Clock:      keyboard_0/debounce_clk/output falling
+  Destination Clock: keyboard_0/debounce_clk/output falling
+
+  Data Path: keyboard_0/keyboard_word_1 to keyboard_0/keyboard_word_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             6   0.514   0.569  keyboard_0/keyboard_word_1 (keyboard_0/keyboard_word_1)
+     FD_1:D                    0.268          keyboard_0/keyboard_word_0
+    ----------------------------------------
+    Total                      1.351ns (0.782ns logic, 0.569ns route)
+                                       (57.9% logic, 42.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            keyboard_clk (PAD)
+  Destination:       keyboard_0/debounce_clk/flipflops_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: keyboard_clk to keyboard_0/debounce_clk/flipflops_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  keyboard_clk_IBUF (keyboard_clk_IBUF)
+     FD:D                      0.268          keyboard_0/debounce_clk/flipflops_0
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 64 / 12
+-------------------------------------------------------------------------
+Offset:              6.041ns (Levels of Logic = 3)
+  Source:            refresh_counter_18 (FF)
+  Destination:       bcd_code<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: refresh_counter_18 to bcd_code<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              21   0.514   1.111  refresh_counter_18 (refresh_counter_18)
+     LUT3:I0->O            1   0.612   0.000  Mmux_bcd_code_3 (Mmux_bcd_code_3)
+     MUXF5:I1->O           1   0.278   0.357  Mmux_bcd_code_2_f5 (bcd_code_0_OBUF)
+     OBUF:I->O                 3.169          bcd_code_0_OBUF (bcd_code<0>)
+    ----------------------------------------
+    Total                      6.041ns (4.573ns logic, 1.468ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.70 secs
+ 
+--> 
+
+Total memory usage is 4557896 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
